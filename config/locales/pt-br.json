@@ -4,7 +4,7 @@
 	"conference_admin": "conference_admin",
 	"Home": "Home",
 	"conference.find": "conference.find",
-	"login.block.button.text": "login.block.button.text",
+	"login.block.button.text": "Entrar",
 	"conference.next.info": "conference.next.info",
 	"days": "dias",
 	"hours": "horas",
@@ -105,5 +105,10 @@
 	"conference.registration.requested": "conference.registration.requested",
 	"conference.btn.registered": "conference.btn.registered",
 	"conference.btn.requested": "conference.btn.requested",
-	"conference.btn.register": "conference.btn.register"
+	"conference.btn.register": "conference.btn.register",
+	"conference.registration.registered": "conference.registration.registered",
+	"Profile": "Profile",
+	"Logout": "Logout",
+	"conference.btn.registration": "conference.btn.registration",
+	"login.block.form.new.account.link": "login.block.form.new.account.link"
 }
