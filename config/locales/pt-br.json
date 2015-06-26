@@ -94,5 +94,16 @@
 	"form-helper-register-email": " ",
 	"form-helper-register-confirmEmail": " ",
 	"form-helper-login-email": "Exemplo: contato@wejs.org",
-	"form-helper-login-password": " "
+	"form-helper-login-password": " ",
+	"we.email.AccontActivationEmail.subject": "we.email.AccontActivationEmail.subject",
+	"auth.register.require.email.activation": "auth.register.require.email.activation",
+	"form-cfregistration-certificationName": "form-cfregistration-certificationName",
+	"form-placeholder-cfregistration-certificationName": "form-placeholder-cfregistration-certificationName",
+	"form-helper-cfregistration-certificationName": "form-helper-cfregistration-certificationName",
+	"form-helper-cfregistration-userEmail": "form-helper-cfregistration-userEmail",
+	"form-helper-cfregistration-specialRequirements": "form-helper-cfregistration-specialRequirements",
+	"conference.registration.requested": "conference.registration.requested",
+	"conference.btn.registered": "conference.btn.registered",
+	"conference.btn.requested": "conference.btn.requested",
+	"conference.btn.register": "conference.btn.register"
 }
