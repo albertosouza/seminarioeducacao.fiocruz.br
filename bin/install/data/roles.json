@@ -11,7 +11,8 @@
             "find_post",
             "find_group",
             "find_role",
-            "find_room"
+            "find_room",
+            "find_conference"
         ],
         "name": "unAuthenticated",
         "description": null
@@ -37,7 +38,8 @@
             "use_follow",
             "use_messenger",
             "find_room",
-            "create_room"
+            "create_room",
+            "find_conference"
         ],
         "name": "authenticated",
         "description": null
