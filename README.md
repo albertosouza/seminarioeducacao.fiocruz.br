@@ -1,18 +1,10 @@
-#We.js site
-
-> This project load and show wejs/we documentation from github link: http://wejs.org
-
-**Build With:**
-
-- We.js
-- Polymer
-- Mysql
+#Sistema do evento Seminário “Educação, Saúde e Sociedade do Futuro”
 
 #How to install
 
 Clone the project
 ```sh
-git clone https://github.com/wejs/site.git
+git clone git@github.com:albertosouza/seminarioeducacao.fiocruz.br.git
 cd site
 ```
 
@@ -40,7 +32,9 @@ npm run dev
 
 # Test
 
-TODO
+```sh
+npm test
+```
 
 #Copyright and license
 
