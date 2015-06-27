@@ -5,11 +5,11 @@ module.exports = function(we, done) {
     async.each([
       {
         text: 'Get started',
-        vocabularyId: vocabulary.id
+        vocabularyName: vocabulary.name
       },
       {
         text: 'Features',
-        vocabularyId: vocabulary.id
+        vocabularyName: vocabulary.name
       }
     ], function(term, next) {
       we.db.models.term.findOrCreate({
