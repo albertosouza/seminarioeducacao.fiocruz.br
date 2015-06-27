@@ -67,8 +67,22 @@ describe('conferenceFeature', function() {
     //     done();
     //   });
     // });
+    it ('get /conference/create should return create form', function (done) {
+      request(http).get('/conference/create')
+      .expect(200)
+      .end(function (err, res) {
+        if (err) throw err;
+        assert(res.text);
+        // todo check tags
+        done();
+      });
+    });
     it ('post /conference/create should create one conference with unpublished status and generate default conference structure', function (done) {
       var cf = stubs.conferenceStub();
+
+      cf.tags = ['code', 'javscript', 'Test'];
+      cf.categories = ['programation'];
+
       authenticatedRequest.post('/conference/create')
       .send(cf)
       .set('Accept', 'application/json')
@@ -85,7 +99,15 @@ describe('conferenceFeature', function() {
         }).then(function (m) {
           // should create more than one menu
           assert(m.length > 0);
-          done();
+
+          request(http).get('/conference/'+ res.body.conference[0].id)
+          .set('Accept', 'application/json')
+          .expect(200)
+          .end(function (err, res) {
+            if (err) throw err;
+            // todo test tags and categories
+            done();
+          });
         });
       });
     });
@@ -126,11 +148,17 @@ describe('conferenceFeature', function() {
     });
     it ('put /conference/:id should update one conference', function (done) {
       var cf = stubs.conferenceStub();
+      cf.tags = ['code', 'javscript', 'Test'];
+      cf.categories = ['programation'];
+
       we.db.models.conference.create(cf).then(function (scf) {
         var newCfData = {
           title: 'updated title :)',
           about: 'Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis.',
         };
+        newCfData.tags = ['code', 'test'];
+        newCfData.categories = ['programation'];
+
         authenticatedRequest.put('/conference/'+ scf.id)
         .send(newCfData)
         .set('Accept', 'application/json')
@@ -144,6 +172,12 @@ describe('conferenceFeature', function() {
           assert.equal(res.body.conference[0].about, newCfData.about);
           assert(res.body.conference[0].title || scf.title);
           assert(res.body.conference[0].about || scf.about);
+
+          assert.equal(res.body.conference[0].tags.length, newCfData.tags.length);
+          assert.equal(res.body.conference[0].categories.length, newCfData.categories.length);
+
+          assert(_.isEqual(res.body.conference[0].tags, newCfData.tags) );
+          assert(_.isEqual(res.body.conference[0].categories, newCfData.categories) );
           done();
         });
       });
