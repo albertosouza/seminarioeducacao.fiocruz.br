@@ -13,6 +13,7 @@ module.exports = function(we, done, sget, program) {
       password: '123',
       displayName: 'Administrator',
       language: 'pt-br',
+      cpf: '88407532908.',
       active: true
     };
 
