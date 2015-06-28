@@ -2,7 +2,6 @@
     {
         "permissions": [
             "find_image",
-            "find_user",
             "find_page",
             "find_comment",
             "find_term",
@@ -21,7 +20,6 @@
         "permissions": [
             "find_image",
             "upload_image",
-            "find_user",
             "find_page",
             "find_comment",
             "create_comment",
@@ -46,6 +44,7 @@
     },
     {
         "permissions": [
+            "find_user",
             "crop_image",
             "delete_image",
             "update_page",

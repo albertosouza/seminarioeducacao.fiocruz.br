@@ -22,5 +22,4 @@ module.exports = function(we, done) {
 
     }).catch(next);
   }, done);
-
 };
