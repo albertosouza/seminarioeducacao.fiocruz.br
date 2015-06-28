@@ -36,6 +36,10 @@ npm run dev
 npm test
 ```
 
+```sh
+NODE_ENV=test LOG_LV=verbose ./node_modules/.bin/mocha test/bootstrap.js test/**/*.test.js -b -g 'text'
+```
+
 #Copyright and license
 
 Copyright 2013-2015 Alberto Souza <alberto.souza.dev@gmail.com> and contributors, under the MIT license.
