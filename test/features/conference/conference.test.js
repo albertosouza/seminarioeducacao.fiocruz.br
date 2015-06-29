@@ -49,6 +49,40 @@ describe('conferenceFeature', function() {
         done();
       });
     });
+
+    it ('post /signup should register 2 users without passaport field', function (done) {
+
+      async.parallel([
+        function registerUser1(cb) {
+          var userStub = stubs.userStub();
+          userStub.passaporte = '';
+          request(http).post('/signup')
+          .send(userStub)
+          .expect(201)
+          .end(function (err, res) {
+            if (err) throw err;
+            // todo , do more tests
+            cb();
+          });
+        },
+        function registerUser2(cb) {
+          var userStub = stubs.userStub();
+          userStub.passaporte = '';
+          request(http).post('/signup')
+          .send(userStub)
+          .expect(201)
+          .end(function (err, res) {
+            if (err) throw err;
+            // todo , do more tests
+            cb();
+          });
+        }
+      ], function(err) {
+        if (err) throw err;
+
+        done();
+      });
+    });
   });
 
   describe('conferenceCRUD', function() {
