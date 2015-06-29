@@ -44,5 +44,8 @@
 	"form-placeholder-conference-location": "form-placeholder-conference-location",
 	"form-conference-status": "form-conference-status",
 	"form-placeholder-conference-status": "form-placeholder-conference-status",
-	"form-helper-conference-status": "form-helper-conference-status"
+	"form-helper-conference-status": "form-helper-conference-status",
+	"Masculine": "Masculine",
+	"Feminine": "Feminine",
+	"placeholder": "placeholder"
 }

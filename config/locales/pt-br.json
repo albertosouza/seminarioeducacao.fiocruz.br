@@ -136,7 +136,7 @@
 	"form-register-cpf": "CPF:",
 	"form-placeholder-register-cpf": "Digite o CPF aqui...",
 	"form-helper-register-cpf": " ",
-	"form-register-passaporte": "Número do seu passaporte",
+	"form-register-passaporte": "Passaporte",
 	"form-placeholder-register-passaporte": "Digite o passaporte aqui...",
 	"form-helper-register-passaporte": " ",
 	"form-helper-register-brasileiro": "Você não possuí um CPF?",
@@ -151,5 +151,12 @@
 	"form-helper-register-city": "Selecione a cidade onde você mora, por exemplo: Recife",
 	"form-register-locationState": "Estado:",
 	"form-helper-register-locationState": "Selecione o estado onde você mora, por exemplo: Pernambuco",
-	"form-helper-register-cep": "CEP de onde você mora"
+	"form-helper-register-cep": "CEP de onde você mora",
+	"form-register-gender": "Sexo:",
+	"form-helper-register-gender": " ",
+	"form-placeholder-register-gender": "Selecione aqui...",
+	"Masculine": "Masculino",
+	"Feminine": "Feminino",
+	"form-register-acceptTerms": "Aceitar os termos de uso.",
+	"form-helper-register-acceptTerms": "Li e aceito os: <a text='Termos de uso do portal de eventos' href='/public/project/terms-of-use.pdf' target'_blank'>Termos de uso.</a>"
 }
