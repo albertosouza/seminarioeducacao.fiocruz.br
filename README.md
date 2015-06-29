@@ -19,14 +19,14 @@ npm run deps
 ```sh
 npm run dev
 ```
-#####Build production app client:
+#####Build production client app:
 ```sh
 npm run build
 ```
 
 #####Run project in production environment:
 ```sh
-npm run dev
+npm run prod
 ```
 
 
