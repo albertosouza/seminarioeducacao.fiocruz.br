@@ -145,7 +145,7 @@
 	"form-register-estrangeiro": "Você não possuí um CPF?",
 	"form-register-cep": "CEP:",
 	"form-placeholder-register-cep": "Digite o CEP aqui...",
-	"user.cep.invalid": "O número de CPF informado não é valido.",
+	"user.cep.invalid": "O número de CEP informado não é valido.",
 	"auth.register.error.username.registered": "O nome de usuário selecionado já está registrado no sistema, selecione outro nome de usuário",
 	"form-register-city": "Cidade:",
 	"form-helper-register-city": "Selecione a cidade onde você mora, por exemplo: Recife",
