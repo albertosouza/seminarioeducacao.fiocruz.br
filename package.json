@@ -20,9 +20,9 @@
     "we-plugin-conference": "^0.3.3",
     "we-plugin-file": "^0.3.1",
     "we-plugin-form": "^0.3.6",
-    "we-plugin-gov-br": "^0.3.4",
-    "we-plugin-location": "^0.3.0",
-    "we-plugin-vocabulary": "^0.3.3",
+    "we-plugin-gov-br": "^0.3.5",
+    "we-plugin-location": "^0.3.1",
+    "we-plugin-vocabulary": "^0.3.4",
     "we-theme-admin-default": "^0.3.5",
     "we-theme-conference-seminarioeducacao.fiocruz.br": "*"
   },
