@@ -1,6 +1,6 @@
 {
   "name": "seminarioeducacao.fiocruz.br",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "private": true,
   "main": "./app.js",
   "scripts": {
@@ -16,13 +16,13 @@
   "dependencies": {
     "async": "^1.2.1",
     "lodash": "^3.3.1",
-    "we-core": "^0.3.41",
-    "we-plugin-conference": "^0.3.3",
-    "we-plugin-file": "^0.3.1",
-    "we-plugin-form": "^0.3.6",
+    "we-core": "^0.3.42",
+    "we-plugin-conference": "^0.3.4",
+    "we-plugin-file": "^0.3.2",
+    "we-plugin-form": "^0.3.7",
     "we-plugin-gov-br": "^0.3.5",
     "we-plugin-location": "^0.3.1",
-    "we-plugin-vocabulary": "^0.3.4",
+    "we-plugin-vocabulary": "^0.3.5",
     "we-theme-admin-default": "^0.3.5",
     "we-theme-conference-seminarioeducacao.fiocruz.br": "*"
   },

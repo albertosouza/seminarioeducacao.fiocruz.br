@@ -52,5 +52,21 @@
 	"Register": "Register",
 	"we.email.AccontActivationEmail.subject": "we.email.AccontActivationEmail.subject",
 	"auth.register.require.email.activation": "auth.register.require.email.activation",
-	"login.block.button.text": "login.block.button.text"
+	"login.block.button.text": "login.block.button.text",
+	"form-conference-published": "form-conference-published",
+	"form-conference-logo": "form-conference-logo",
+	"file.image.select.btn": "file.image.select.btn",
+	"Name": "Name",
+	"thumbnail": "thumbnail",
+	"Actions": "Actions",
+	"image.remove": "image.remove",
+	"form-helper-conference-logo": "form-helper-conference-logo",
+	"form-conference-banner": "form-conference-banner",
+	"form-helper-conference-banner": "form-helper-conference-banner",
+	"image.selector": "image.selector",
+	"image.uploader.title": "image.uploader.title",
+	"image.selector.title": "image.selector.title",
+	"image.upload.selector.btn": "image.upload.selector.btn",
+	"widget.add": "widget.add",
+	"widget.update": "widget.update"
 }
