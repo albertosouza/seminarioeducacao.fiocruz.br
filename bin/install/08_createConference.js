@@ -9,7 +9,7 @@ module.exports = function(we, done) {
       registrationManagerEmail: 'contato@albertosouza.net',
       location: 'Fundação Oswaldo Cruz, Rio de Janeiro, Brasil',
 
-      vacation: 200,
+      vacanciess: 200,
 
       callForPapersStartDate: null,
       callForPapersEndDate: null,
@@ -25,7 +25,7 @@ module.exports = function(we, done) {
       }).then(function (menu) {
         console.log('menu', menu)
         we.db.models.cflink.bulkCreate([
-          { href: '/conference/1#home', text: 'Início', weight: 0, conferenceId: r.id, cfmenuId: menu.id  },
+          { href: '/conference/1', text: 'Início', weight: 0, conferenceId: r.id, cfmenuId: menu.id  },
           { href: '/conference/1#schedule', text: 'Programação', weight: 1,conferenceId: r.id, cfmenuId: menu.id },
           { href: '/conference/1#speakers', text: 'Palestrantes', weight: 2,conferenceId: r.id, cfmenuId: menu.id },
           { href: '/conference/1#ourLocation', text: 'Localização', weight: 3,conferenceId: r.id, cfmenuId: menu.id },

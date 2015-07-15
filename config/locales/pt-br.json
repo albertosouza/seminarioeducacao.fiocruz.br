@@ -475,5 +475,6 @@
 	"menu.main": "Menu principal",
 	"menu.secondary": "Menu secundário",
 	"conference.structure.menus": "Menus da estrutura do evento",
-	"conference.menu.empty": "Esse evento ainda não tem nenhum menu"
+	"conference.menu.empty": "Esse evento ainda não tem nenhum menu",
+	"conference.cfnews.empty": "Ainda não temos notícias publicadas sobre a conferencia."
 }
