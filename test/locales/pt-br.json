@@ -68,5 +68,10 @@
 	"image.selector.title": "image.selector.title",
 	"image.upload.selector.btn": "image.upload.selector.btn",
 	"widget.add": "widget.add",
-	"widget.update": "widget.update"
+	"widget.update": "widget.update",
+	"form-conference-favicon": "form-conference-favicon",
+	"form-helper-conference-favicon": "form-helper-conference-favicon",
+	"user.profile.view": "user.profile.view",
+	"user.profile.edit": "user.profile.edit",
+	"auth.change-password": "auth.change-password"
 }
