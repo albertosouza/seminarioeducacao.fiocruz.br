@@ -19,7 +19,21 @@ module.exports = function(we, done) {
       eventEndDate: '2015-08-27 17:00:00'
     }).then(function (r) {
       we.log.info('Conference created: ', r.id, r.title);
-      done();
+
+      we.db.models.cfmenu.findOne({
+        where: { conferenceId: r.id, name: 'main' }
+      }).then(function (menu) {
+        console.log('menu', menu)
+        we.db.models.cflink.bulkCreate([
+          { href: '/conference/1#home', text: 'Início', weight: 0, conferenceId: r.id, cfmenuId: menu.id  },
+          { href: '/conference/1#schedule', text: 'Programação', weight: 1,conferenceId: r.id, cfmenuId: menu.id },
+          { href: '/conference/1#speakers', text: 'Palestrantes', weight: 2,conferenceId: r.id, cfmenuId: menu.id },
+          { href: '/conference/1#ourLocation', text: 'Localização', weight: 3,conferenceId: r.id, cfmenuId: menu.id },
+          { href: '/conference/1/news', text: 'Notícias', weight: 4,conferenceId: r.id, cfmenuId: menu.id },
+        ]).then(function() {
+          done();
+        }).catch(done);
+      });
     });
   }).catch(done);
 };
