@@ -9,5 +9,17 @@ we.bootstrap(function(err, we) {
     we.projectPath +'/node_modules/we-plugin-location/bin/registerAllLocations.js'
   );
 
-  register.saveLocations(we, done);
+  register.saveLocations(we, doneAll);
 });
+
+
+function doneAll(err) {
+  if ( err ) {
+    we.log.error('Error on create user:', err);
+  }
+
+  we.exit(function () {
+    // end / exit
+    process.exit();
+  });
+}
