@@ -23,7 +23,6 @@ module.exports = function(we, done) {
       we.db.models.cfmenu.findOne({
         where: { conferenceId: r.id, name: 'main' }
       }).then(function (menu) {
-        console.log('menu', menu)
         we.db.models.cflink.bulkCreate([
           { href: '/conference/1', text: 'Início', weight: 0, conferenceId: r.id, cfmenuId: menu.id  },
           { href: '/conference/1#schedule', text: 'Programação', weight: 1,conferenceId: r.id, cfmenuId: menu.id },
