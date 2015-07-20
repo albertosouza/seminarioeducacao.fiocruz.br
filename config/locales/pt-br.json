@@ -553,7 +553,7 @@
 	"cfsession.no.date": "Sem data",
 	"conference.schedule": "Programação",
 	"date.to": "a",
-	"cfpartner.find": "cfpartner.find",
+	"cfpartner.find": "Apoio",
 	"conference.cfpartner.empty": "conference.cfpartner.empty",
 	"conference.cfpartner": "conference.cfpartner",
 	"cfpartner.create": "cfpartner.create",
@@ -597,5 +597,13 @@
 	"cfregistration.un-register": "cfregistration.un-register",
 	"cfregistration.unRegister": "Cancelar inscrição",
 	"cfregistration.unRegister.confirm.msg": "Você tem certeza que deseja canselar a inscrição no seminário?",
-	"Você tem certeza que deseja canselar a inscrição no seminário?": "Você tem certeza que deseja cancelar a inscrição no seminário?"
+	"Você tem certeza que deseja canselar a inscrição no seminário?": "Você tem certeza que deseja cancelar a inscrição no seminário?",
+	"Content": "Content",
+	"Structure": "Structure",
+	"form-conference-registrationEmail": "form-conference-registrationEmail",
+	"form-helper-conference-registrationEmail": "form-helper-conference-registrationEmail",
+	"form-conference-registrationWaitingAccept": "form-conference-registrationWaitingAccept",
+	"form-helper-conference-registrationWaitingAccept": "form-helper-conference-registrationWaitingAccept",
+	"form-conference-registeredText": "form-conference-registeredText",
+	"form-helper-conference-registeredText": "form-helper-conference-registeredText"
 }
