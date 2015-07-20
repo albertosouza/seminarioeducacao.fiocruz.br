@@ -11,7 +11,10 @@
             "find_group",
             "find_role",
             "find_room",
-            "find_conference"
+            "find_conference",
+            "find_cfspeaker",
+            "find_cfnews",
+            "find_cfpartner"
         ],
         "name": "unAuthenticated",
         "description": null
@@ -37,7 +40,10 @@
             "use_messenger",
             "find_room",
             "create_room",
-            "find_conference"
+            "find_conference",
+            "find_cfspeaker",
+            "find_cfnews",
+            "find_cfpartner"
         ],
         "name": "authenticated",
         "description": null
