@@ -605,5 +605,6 @@
 	"form-conference-registrationWaitingAccept": "form-conference-registrationWaitingAccept",
 	"form-helper-conference-registrationWaitingAccept": "form-helper-conference-registrationWaitingAccept",
 	"form-conference-registeredText": "form-conference-registeredText",
-	"form-helper-conference-registeredText": "form-helper-conference-registeredText"
+	"form-helper-conference-registeredText": "form-helper-conference-registeredText",
+	"field.password.confirm-password.diferent": "Os campos de senha e repetir a senha estão diferentes"
 }
