@@ -610,5 +610,20 @@
 	"form-cftopic-weight": "form-cftopic-weight",
 	"form-placeholder-cftopic-weight": "form-placeholder-cftopic-weight",
 	"form-helper-cftopic-weight": "form-helper-cftopic-weight",
-	"cfroom.managePage": "Salas"
+	"cfroom.managePage": "Salas",
+	"video.url": "video.url",
+	"cfvideo.find": "cfvideo.find",
+	"cfvideo.create": "cfvideo.create",
+	"form-cfvideo-title": "form-cfvideo-title",
+	"form-placeholder-cfvideo-title": "form-placeholder-cfvideo-title",
+	"form-helper-cfvideo-title": "form-helper-cfvideo-title",
+	"form-cfvideo-description": "form-cfvideo-description",
+	"form-helper-cfvideo-description": "form-helper-cfvideo-description",
+	"form-cfvideo-url": "form-cfvideo-url",
+	"form-cfvideo-categories": "form-cfvideo-categories",
+	"form-helper-cfvideo-categories": "form-helper-cfvideo-categories",
+	"form-cfvideo-tags": "form-cfvideo-tags",
+	"form-helper-cfvideo-tags": "form-helper-cfvideo-tags",
+	"form-placeholder-cfvideo-url": "form-placeholder-cfvideo-url",
+	"form-helper-cfvideo-url": "form-helper-cfvideo-url"
 }
