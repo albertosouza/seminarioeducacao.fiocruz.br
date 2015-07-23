@@ -610,5 +610,6 @@
 	"form-cftopic-weight": "form-cftopic-weight",
 	"form-placeholder-cftopic-weight": "form-placeholder-cftopic-weight",
 	"form-helper-cftopic-weight": "form-helper-cftopic-weight",
-	"cfroom.managePage": "Salas"
+	"cfroom.managePage": "Salas",
+	"ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: '' for column 'published' at row 1": "ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: '' for column 'published' at row 1"
 }
