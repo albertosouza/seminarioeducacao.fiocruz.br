@@ -611,7 +611,6 @@
 	"form-placeholder-cftopic-weight": "form-placeholder-cftopic-weight",
 	"form-helper-cftopic-weight": "form-helper-cftopic-weight",
 	"cfroom.managePage": "Salas",
-
 	"video.url": "Link do vídeo",
 	"cfvideo.find": "Vídeos",
 	"cfvideo.create": "Criar vídeo",
@@ -626,5 +625,6 @@
 	"form-cfvideo-tags": "Tags",
 	"form-helper-cfvideo-tags": "Selecione algumas palavras relacionadas com o vídeo",
 	"form-placeholder-cfvideo-url": " ",
-	"form-helper-cfvideo-url": "Por exemplo o link de um vídeo do youtube"
+	"form-helper-cfvideo-url": "Por exemplo o link de um vídeo do youtube",
+	"widget.form.video.vid": "Id do conteúdo vídeo:"
 }
