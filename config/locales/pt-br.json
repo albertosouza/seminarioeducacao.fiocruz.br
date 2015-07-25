@@ -670,5 +670,6 @@
 	"conference.registered": "Minha inscrição",
 	"user.username.invalid": "user.username.invalid",
 	"Obrigado! Em instantes, você receberá um e-mail para confirmar seu cadastro e prosseguir com a sua inscrição no seminário.": "Obrigado! Em instantes, você receberá um e-mail para confirmar seu cadastro e prosseguir com a sua inscrição no seminário.",
-	"conference.registration.success.email": "conference.registration.success.email"
+	"conference.registration.success.email": "conference.registration.success.email",
+	"Obrigado! Em instantes, você receberá um e-mail para confirmar seu cadastro e prosseguir com a inscrição no seminário.": "Obrigado! Em instantes, você receberá um e-mail para confirmar seu cadastro e prosseguir com a inscrição no seminário."
 }
