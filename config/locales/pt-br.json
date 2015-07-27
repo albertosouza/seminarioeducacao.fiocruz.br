@@ -745,5 +745,6 @@
 	"cfcontact.email.success": "A sua mensagem foi enviada",
 	"cfcontact.new.email.subject": "Novo email do fale conosco",
 	"cfcontact.find": "Mensagens do fale conosco",
-	"cfcontact.findOne": "Mensagem de contato"
+	"cfcontact.findOne": "Mensagem de contato",
+	"cfregistration.find": "cfregistration.find"
 }
