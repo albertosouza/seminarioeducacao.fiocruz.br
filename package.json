@@ -19,7 +19,7 @@
     "we-core": "^0.3.53",
     "we-plugin-conference": "^0.3.13",
     "we-plugin-conference-simple-work": "^0.3.0",
-    "we-plugin-file": "^0.3.6",
+    "we-plugin-file": "^0.3.7",
     "we-plugin-form": "^0.3.13",
     "we-plugin-gov-br": "^0.3.7",
     "we-plugin-location": "^0.3.2",
