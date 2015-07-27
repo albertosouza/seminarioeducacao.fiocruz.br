@@ -95,7 +95,7 @@
 	"form-helper-register-confirmEmail": " ",
 	"form-helper-login-email": "Exemplo: santosouza@exemplo.org",
 	"form-helper-login-password": " ",
-	"we.email.AccontActivationEmail.subject": "Email de validação de registro",
+	"we.email.AccontActivationEmail.subject": "Email de validação de inscrição",
 	"auth.register.require.email.activation": "Obrigado! Em instantes, você receberá um e-mail para confirmar seu cadastro e prosseguir com a inscrição no seminário.",
 	"form-cfregistration-certificationName": "Nome completo:",
 	"form-placeholder-cfregistration-certificationName": " ",
@@ -664,9 +664,9 @@
 	"cfsession.addRegistration.success": "Seu registro foi confirmado para a atividade",
 	"cfsession.removeRegistration.success": "Sua inscrição na atividade foi cancelada",
 	"cfsession.registration.cfsessionIsRequired": "Selecione uma atividade antes de salvar",
-	"cfsession.removeRegistration.confirm": "cfsession.removeRegistration.confirm",
+	"cfsession.removeRegistration.confirm": "Deseja realmente remover a sua inscrição na atividade?",
 	"return": "return",
-	"cfsession.addRegistration.success.email": "cfsession.addRegistration.success.email",
+	"cfsession.addRegistration.success.email": "Confirmação de inscrição em atividade do seminário",
 	"conference.registered": "Minha inscrição",
 	"user.username.invalid": "O nome de usuário digitado não é válido",
 	"Obrigado! Em instantes, você receberá um e-mail para confirmar seu cadastro e prosseguir com a sua inscrição no seminário.": "Obrigado! Em instantes, você receberá um e-mail para confirmar seu cadastro e prosseguir com a sua inscrição no seminário.",
@@ -746,5 +746,6 @@
 	"cfcontact.new.email.subject": "Novo email do fale conosco",
 	"cfcontact.find": "Mensagens do fale conosco",
 	"cfcontact.findOne": "Mensagem de contato",
-	"cfregistration.find": "cfregistration.find"
+	"cfregistration.find": "cfregistration.find",
+	" conference.registration.success.email": "Email de confirmação de inscrição"
 }
