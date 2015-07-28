@@ -747,5 +747,13 @@
 	"cfcontact.find": "Mensagens do fale conosco",
 	"cfcontact.findOne": "Mensagem de contato",
 	"cfregistration.find": "cfregistration.find",
-	" conference.registration.success.email": "Email de confirmação de inscrição"
+	" conference.registration.success.email": "Email de confirmação de inscrição",
+	"form-cfwork-file": "Anexar apresentação do trabalho:",
+	"form-helper-cfwork-file": "Máximo de 10MB e com o formato de arquivo de apresentação (.ppt)",
+	"file.file.select.btn": "Selecionar arquivo",
+	"file.remove": "Remover arquivo",
+	"file.selector": "Selecionar arquivo",
+	"file.uploader.title": "Enviar arquivo",
+	"file.upload.selector.btn": "Selecionar arquivo",
+	"name cannot be null": "O nome não pode ser vazio"
 }
