@@ -99,5 +99,12 @@
 	"conference_admin_layouts": "conference_admin_layouts",
 	"conference_findOne.page_manage": "conference_findOne.page_manage",
 	"auth.forgot-password": "auth.forgot-password",
-	"conference.find": "conference.find"
+	"conference.find": "conference.find",
+	"cfregistrationtype.find": "cfregistrationtype.find",
+	"cfvideo.find": "cfvideo.find",
+	"layout.select.widget.type": "layout.select.widget.type",
+	"Next": "Next",
+	"file.selector": "file.selector",
+	"file.uploader.title": "file.uploader.title",
+	"file.upload.selector.btn": "file.upload.selector.btn"
 }
