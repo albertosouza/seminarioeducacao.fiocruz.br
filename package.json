@@ -1,6 +1,6 @@
 {
   "name": "seminarioeducacao.fiocruz.br",
-  "version": "0.3.15",
+  "version": "0.3.16",
   "private": true,
   "main": "./app.js",
   "scripts": {
@@ -16,9 +16,9 @@
   "dependencies": {
     "async": "^1.2.1",
     "lodash": "^3.3.1",
-    "we-core": "^0.3.54",
+    "we-core": "^0.3.55",
     "we-plugin-conference": "^0.3.14",
-    "we-plugin-conference-simple-work": "^0.3.2",
+    "we-plugin-conference-simple-work": "^0.3.3",
     "we-plugin-file": "^0.3.8",
     "we-plugin-form": "^0.3.13",
     "we-plugin-gov-br": "^0.3.7",
