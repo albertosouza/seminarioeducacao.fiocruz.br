@@ -18,6 +18,11 @@ module.exports = function loadPlugin(projectPath, Plugin) {
       action     : 'index',
       template   : 'home/index',
       layoutName : 'fullwidth'
+    },
+    'get /conference/1/enviar-trabalho':  {
+      controller : 'main',
+      action     : 'redirectToSendWork',
+      responseType: 'json'
     }
   });
 
