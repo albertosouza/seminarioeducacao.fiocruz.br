@@ -14,7 +14,8 @@
 
     "fullName": {
       "type": "text",
-      "defaultValue": ""
+      "defaultValue": "",
+      "allowNull": false
     },
 
     "password": {
