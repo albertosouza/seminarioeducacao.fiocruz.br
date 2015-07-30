@@ -159,7 +159,7 @@
 	"Feminine": "Feminino",
 	"form-register-acceptTerms": "Aceitar os termos de uso.",
 	"form-helper-register-acceptTerms": "Li e aceito os: <a text='Termos de uso do portal de seminários' href='/public/project/terms-of-use.pdf' target='_blank'>Termos de uso.</a>",
-	"auth.register.email.exists": "auth.register.email.exists",
+	"auth.register.email.exists": "O email informado já está cadastrado no sistema",
 	"O email e a confirmação de email são diferentes": "O email e a confirmação de email são diferentes",
 	"O nome de usuário selecionado já está registrado no sistema, selecione outro nome de usuário": "O nome de usuário selecionado já está registrado no sistema, selecione outro nome de usuário",
 	"cpf must be unique": "cpf must be unique",
@@ -756,5 +756,8 @@
 	"form-helper-user-fullName": " ",
 	"auth.access.invalid.token": "O link de validação ou autenticação já foi usado, para avançar você deve se autenticar com o email e senha cadastrados no sistema",
 	"auth.consumeForgotPasswordToken.token.invalid": "O link de validação ou autenticação já foi usado, para avançar você deve se autenticar com o email e senha cadastrados no sistema",
-	"view": "view"
+	"view": "Ver",
+	"auth.confirmPassword.and.newPassword.diferent": "Os campos senha e repetir a senha estão diferentes",
+	"username must be unique": "O nome de usuário deve ser único",
+	"passaporte must be unique": "O campo passaporte deve ser único"
 }

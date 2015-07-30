@@ -6,18 +6,11 @@
   "action": "/signup",
 
   "fields": {
-    "username": {
-      "type": "text",
-      "defaultValue": "",
-      "allowNull": false
-    },
-
     "fullName": {
       "type": "text",
       "defaultValue": "",
       "allowNull": false
     },
-
     "password": {
       "type": "password",
       "defaultValue": "",

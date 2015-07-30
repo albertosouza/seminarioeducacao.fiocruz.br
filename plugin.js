@@ -33,5 +33,13 @@ module.exports = function loadPlugin(projectPath, Plugin) {
     }
   });
 
+  plugin.hooks.on('we:models:before:instance', function (we, done) {
+    we.db.modelsConfigs.user.definition.username.unique = false;
+    we.db.modelsConfigs.user.definition.username.allowNull = true;
+    delete we.db.modelsConfigs.user.definition.username.validate;
+
+    done();
+  });
+
   return plugin;
 };
