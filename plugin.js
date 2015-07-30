@@ -12,8 +12,15 @@ module.exports = function loadPlugin(projectPath, Plugin) {
 
   // set plugin routes
   plugin.setRoutes({
-    // homepage | default home page
+    //redirect to conference 1
     'get /': {
+      controller : 'main',
+      action     : 'index',
+      template   : 'home/index',
+      layoutName : 'fullwidth'
+    },
+    //redirect to conference 1
+    'get /conference': {
       controller : 'main',
       action     : 'index',
       template   : 'home/index',
