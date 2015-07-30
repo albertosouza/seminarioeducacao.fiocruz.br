@@ -755,5 +755,6 @@
 	"form-placeholder-user-fullName": "Digite o seu nome completo aqui ...",
 	"form-helper-user-fullName": " ",
 	"auth.access.invalid.token": "O link de validação ou autenticação já foi usado, para avançar você deve se autenticar com o email e senha cadastrados no sistema",
-	"auth.consumeForgotPasswordToken.token.invalid": "O link de validação ou autenticação já foi usado, para avançar você deve se autenticar com o email e senha cadastrados no sistema"
+	"auth.consumeForgotPasswordToken.token.invalid": "O link de validação ou autenticação já foi usado, para avançar você deve se autenticar com o email e senha cadastrados no sistema",
+	"view": "view"
 }
