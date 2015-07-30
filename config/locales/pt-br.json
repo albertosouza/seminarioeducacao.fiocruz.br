@@ -741,7 +741,7 @@
 	"cfcontact.new.email.subject": "Novo email do fale conosco",
 	"cfcontact.find": "Mensagens do fale conosco",
 	"cfcontact.findOne": "Mensagem de contato",
-	"cfregistration.find": "cfregistration.find",
+	"cfregistration.find": "Inscrições",
 	" conference.registration.success.email": "Email de confirmação de inscrição",
 	"form-cfwork-file": "Anexar apresentação do trabalho:",
 	"form-helper-cfwork-file": "Máximo de 10MB e com o formato de arquivo de apresentação (.ppt)",
@@ -750,5 +750,10 @@
 	"file.selector": "Selecionar arquivo",
 	"file.uploader.title": "Enviar arquivo",
 	"file.upload.selector.btn": "Selecionar arquivo",
-	"name cannot be null": "O nome não pode ser vazio"
+	"name cannot be null": "O nome não pode ser vazio",
+	"form-user-fullName": "Nome completo",
+	"form-placeholder-user-fullName": "Digite o seu nome completo aqui ...",
+	"form-helper-user-fullName": " ",
+	"auth.access.invalid.token": "O link de validação ou autenticação já foi usado, para avançar você deve se autenticar com o email e senha cadastrados no sistema",
+	"auth.consumeForgotPasswordToken.token.invalid": "O link de validação ou autenticação já foi usado, para avançar você deve se autenticar com o email e senha cadastrados no sistema"
 }
