@@ -41,7 +41,7 @@
     },
 
     "organization": {
-      "type": "vocabulary/tag",
+      "type": "vocabulary/tag-input",
       "defaultValue": "",
       "vocabularyName": "Organization",
       "canCreate": true,
