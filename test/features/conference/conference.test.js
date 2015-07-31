@@ -161,7 +161,7 @@ describe('conferenceFeature', function() {
         });
       });
     });
-    it ('get /conference should get conference list', function (done) {
+    it ('get /conference should redirect to conference 1', function (done) {
       var cfs = [
         stubs.conferenceStub(), stubs.conferenceStub(), stubs.conferenceStub()
       ];
@@ -170,11 +170,9 @@ describe('conferenceFeature', function() {
         request(http)
         .get('/conference')
         .set('Accept', 'application/json')
-        .expect(200)
+        .expect(302)
         .end(function (err, res) {
           if (err) throw err;
-          assert(res.body.conference);
-          assert(res.body.conference.length >= 3);
 
           done();
         });
@@ -245,9 +243,9 @@ describe('conferenceFeature', function() {
       });
     });
 
-    it ('post /conference/:conferenceId/page/create should create one page inside the conference and return JSON', function (done) {
+    it ('post /conference/:conferenceId/cfpage/create should create one page inside the conference and return JSON', function (done) {
       var pageStub = stubs.pageStub();
-      authenticatedRequest.post('/conference/'+SC.id+'/admin/page/create')
+      authenticatedRequest.post('/conference/'+SC.id+'/cfpage/create')
       .send(pageStub)
       .set('Accept', 'application/json')
       .expect(201)
@@ -261,17 +259,16 @@ describe('conferenceFeature', function() {
       });
     });
 
-    it ('post /conference/:conferenceId/page/create should create one page inside the conference and redirect', function (done) {
+    it ('post /conference/:conferenceId/cfpage/create should create one page inside the conference and redirect', function (done) {
       var pageStub = stubs.pageStub();
-      authenticatedRequest.post('/conference/'+SC.id+'/admin/page/create')
+      authenticatedRequest.post('/conference/'+SC.id+'/cfpage/create')
       .send(pageStub)
       .expect(302)
       .end(function (err, res) {
-        console.log(res.text)
         if (err) throw err;
 
         assert(res.text.indexOf(
-          'Moved Temporarily. Redirecting to /conference/'+SC.id+'/page/') >-1
+          'Moved Temporarily. Redirecting to /conference/'+SC.id+'/cfpage/') >-1
         );
         done();
       });
