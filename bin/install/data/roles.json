@@ -50,6 +50,17 @@
     },
     {
         "permissions": [
+            "manage_conference",
+            "find_conference",
+            "find_cfspeaker",
+            "find_cfnews",
+            "find_cfpartner"
+        ],
+        "name": "conferenceManager",
+        "description": null
+    },
+    {
+        "permissions": [
             "find_user",
             "crop_image",
             "delete_image",
