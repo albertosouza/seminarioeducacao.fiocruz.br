@@ -49022,59 +49022,6 @@ var we = {
       });
     });
 
-    // - update widget form
-    we.events.on('update-widget-modal', function (event, element) {
-      var modalForm = $('#updateWidgetFormModal');
-      var id = element.attr('model-id');
-
-      if (!id) return console.warn('data-id attribute is required for data-we-action');
-
-      modalForm.modal('show');
-
-      var url = '/api/v1/widget/'+id+'/form';
-      $.get(url).then(function (f) {
-        modalForm.find('.modal-body').html(f);
-
-        modalForm.find('form').submit(function( event ) {
-          event.preventDefault();
-          var formData = {};
-
-          modalForm.find('form').serializeArray().forEach(function (d) {
-            formData[d.name] = d.value;
-          });
-
-          $.ajax({
-            url: '/api/v1/widget/'+id+'?responseType=json',
-            method: 'PUT',
-            dataType: 'json',
-            contentType: 'application/json; charset=utf-8',
-            data: JSON.stringify(formData)
-          }).then(function (r) {
-            we.events.emit('model-update', 'widget', r.widget);
-            modalForm.modal('hide');
-          });
-        });
-      });
-    });
-
-    // -delete widgets
-    we.events.on('model-delete-widget', function(event, element){
-      var id = element.attr('model-id');
-
-      if (confirm('Are you sure you want to delete this content?')) {
-        if(!id) return;
-
-        $.ajax({
-          url: '/api/v1/widget/'+id+'?responseType=json',
-          method: 'delete',
-          contentType: 'application/json; charset=utf-8'
-        }).then(function (r) {
-          we.events.emit('model-update-after', 'widget', r);
-          $('[model-widget='+id+']').remove();
-        });
-      }
-    });
-
     we.events.on('model-update', self.model.liveUpdate);
     we.events.on('model-delete', self.model.liveDelete);
   },
@@ -49110,6 +49057,8 @@ var we = {
 
 we.structure = {
   addWidgetModalFormId: '#AddWidgetFormModal',
+  updateWidgetModalFormId: '#updateWidgetFormModal',
+  sortWidgetModalFormId: '#sortWidgetFormModal',
 
   showLayoutEditor: function showLayoutEditor() {
     $('#we-layout-start-edit-btn').hide();
@@ -49130,7 +49079,7 @@ we.structure = {
     if (!modal) throw new Error('Add widget modal not found!', we.structure.addWidgetModalFormId);
 
     this.newWidgetObj = {
-      theme: '',
+      theme: we.config.theme,
       layout: $('layout').attr('data-we-layout'),
       type: '',
       regionName: regionName,
@@ -49138,42 +49087,98 @@ we.structure = {
     };
 
     $.get('/api/v1/widget-types').then(function(r){
-
       $('#AddWidgetFormModal-select-type').select2({
         data: r.widget.map(function (name){
           return { id : name, text: name };
         })
       });
     });
-
-
-
     // 1 selecionar tipo de widget
     // 2
-
+    modal.find('.steps-body .step1').show();
+    modal.find('.steps-body .step2').hide();
     // var url = '/api/v1/widget-form/' + form.find('input[name=theme]').val();
-      modal.modal('show');
+    modal.modal('show');
   },
+  goToStep1: function goToStep1() {
+    var modal = $(we.structure.addWidgetModalFormId);
 
-  openWidgetForm: function openWidgetForm(event) {
-    event.preventDefault();
+    modal.find('.steps-body .step1').show();
+  },
+  goToStep2: function goToStep2() {
+    var modal = $(we.structure.addWidgetModalFormId);
+    var regionTag = $('#region-'+ this.newWidgetObj.regionName);
 
-    var form = $(event.target);
+    this.newWidgetObj.type = $('#AddWidgetFormModal-select-type').val();
+    // type is required for step 2
+    if (!this.newWidgetObj.type) return;
 
-    var modalForm = $('#AddWidgetFormModal');
-    if (!modalForm) return;
+    modal.find('.steps-body .step1').hide();
+    modal.find('.steps-body .step2').show();
 
-    var url = '/api/v1/widget-form/' + form.find('input[name=theme]').val();
-    url += '/' + form.find('input[name=layout]').val();
-    url += '/' + form.find('input[name=type]').val();
-    url += '?regionName=' + form.find('select').val();
+    var url = '/api/v1/widget-form/'+this.newWidgetObj.theme;
+    url += '/' + this.newWidgetObj.layout;
+    url += '/' + this.newWidgetObj.type;
+    url += '?regionName=' + this.newWidgetObj.regionName;
 
-    var wc = form.find('input[name=context]').val();
-    if (wc) url += '&context=' + wc;
+    if (we.config.widgetContext)
+      url += '&context=' + we.config.widgetContext;
+
+    $.get(url).then(function (f) {
+      modal.find('.steps-body .step2').html(f);
+      modal.modal('show');
+
+      modal.find('form').submit(function( event ) {
+        event.preventDefault();
+        var formData = {};
+
+        modal.find('form').serializeArray().forEach(function (d) {
+          formData[d.name] = d.value;
+        });
+
+        var url = we.config.structure.widgetCreateUrl;
+        if (!url) url = '/api/v1/widget';
+        url+='?responseType=json';
+
+        switch(formData.visibility) {
+          case 'in-page':
+            formData.modelName = we.config.modelName;
+            formData.modelId = we.config.modelId;
+            break;
+          case 'in-session':
+            formData.modelName = we.config.modelName;
+            formData.modelId = null;
+            break;
+          default:
+            formData.modelName = null;
+            formData.modelId = null;
+        }
+
+        $.post(url, formData)
+        .then(function (r) {
+          // insert after regions actions
+          regionTag.find('widgets').prepend(r.widget[0].html);
+        }).always(function(){
+          modal.modal('hide');
+        });
+      });
+    });
+  },
+  updateWidget: function updateWidget(id) {
+    var modalForm = $(this.updateWidgetModalFormId);
+
+    if (!id) return console.warn('data-id attribute is required for updateWidget');
+
+    var widgetTag = $('widget[model-widget='+id+']');
+    modalForm.modal('show');
+
+    var url = '/api/v1/widget/';
+    if (we.config.structure.widgetEditFormUrl)
+      url = we.config.structure.widgetEditFormUrl
+    url += id+'/form';
 
     $.get(url).then(function (f) {
       modalForm.find('.modal-body').html(f);
-      modalForm.modal('show');
 
       modalForm.find('form').submit(function( event ) {
         event.preventDefault();
@@ -49183,58 +49188,79 @@ we.structure = {
           formData[d.name] = d.value;
         });
 
-        var url = form.attr('we-form-widget-url');
-        if (!url) url = '/api/v1/widget';
+        var url = '/api/v1/widget/'+id+'?responseType=json';
+        if (we.config.structure.widgetUpdateUrl) {
+          url = we.config.structure.widgetUpdateUrl+id+'?responseType=json'
+        }
 
-        $.post(url+'?responseType=json', formData).then(function () {
+        switch(formData.visibility) {
+          case 'in-page':
+            formData.modelName = we.config.modelName;
+            formData.modelId = we.config.modelId;
+            break;
+          case 'in-session':
+            formData.modelName = we.config.modelName;
+            formData.modelId = null;
+            break;
+          default:
+            formData.modelName = null;
+            formData.modelId = null;
+        }
+
+        $.ajax({
+          url: url,
+          method: 'POST',
+          dataType: 'json',
+          contentType: 'application/json; charset=utf-8',
+          data: JSON.stringify(formData)
+        }).then(function (r) {
+          we.events.emit('model-update', 'widget', r.widget);
+          widgetTag.after(r.widget[0].html);
+          widgetTag.remove();
+        }).always(function(){
           modalForm.modal('hide');
-          // reload widgets page TODO change to insert new item un widget table
-          location.reload();
-        });
+        })
       });
     });
   },
-  emptyWidgets: function emptyWidgets() {
-    for (var i = 0; i < we.structure.regions.length; i++) {
-      // empty all regions
-      we.structure.regions[i].html('');
+  deleteWidget: function deleteWidget(id) {
+    if (!id) return console.warn('data-id attribute is required for deleteWidget');
+
+    var url;
+    if (we.config.structure.widgetDeleteUrl) {
+      url = we.config.structure.widgetDeleteUrl+id
+    } else {
+      url = '/api/v1/widget/'+id;
+    }
+    url += '/delete?responseType=json';
+
+    if (confirm(we.config.structure.deleteWidgetConfirm)) {
+      $.ajax({
+        url: url,
+        method: 'POST',
+        contentType: 'application/json; charset=utf-8'
+      }).then(function (r) {
+        we.events.emit('model-update-after', 'widget', r);
+        $('[model-widget='+id+']').remove();
+      });
     }
   },
-  reloadWidgets: function reloadWidgets(ctx) {
-    var region;
-    we.structure.emptyWidgets();
 
-    if (ctx.data && ctx.data.meta && ctx.data.meta.layout && ctx.data.meta.layout.regions) {
-      for (var regionName in ctx.data.meta.layout.regions) {
-        if (!we.structure.regions[regionName]) continue;
+  sortRegionWidgetsForm: function sortRegionWidgetsForm(regionName) {
+    var modal = $(we.structure.sortWidgetModalFormId);
+    if (!modal) throw new Error('sort widget modal not found!', we.structure.sortWidgetModalFormId);
+   modal.modal('show');
 
-        var regionElement = we.structure.regions[regionName];
+    var url = '/api/v1/widget-sort/';
+    if (we.config.structure.widgetSortUrl)
+      url = we.config.structure.widgetSortUrl;
 
-        region = ctx.data.meta.layout.regions[regionName];
-        for (var i = 0; i < region.widgets.length; i++) {
-          regionElement.append( we.structure.buildWidget(region.widgets[i]) );
-        }
-      }
-    }
-  },
-  buildWidget: function buildWidget(widget) {
-    var html = '<' +widget.component;
-    if (widget.attributes) {
-      html += we.structure.buildWidgetAttributes(widget.attributes)
-    }
-    html += '>';
-    if (widget.content) {
-      html += widget.content;
-    }
-    html += '</' +widget.component+ '>';
-    return html;
-  },
-  buildWidgetAttributes: function buildWidgetAttributes(attrs) {
-    var text = '';
-    for(var attr in attrs) {
-      text += ' ' + attr + '="' +attrs[attr]+ '" ';
-    }
-    return text;
+    url += we.config.theme + '/'+
+      $('layout').attr('data-we-layout')+
+      '/'+regionName  + '?skipHTML=true';
+    $.get(url).then(function (f) {
+      modal.find('.modal-body').html(f);
+    });
   }
 };
 
@@ -49332,14 +49358,14 @@ we.events = new we.Event();
 
 we.admin = {};
 we.admin.layouts = {
-  widgetTableSorter: function widgetTableSorter (selector) {
+  widgetTableSorter: function widgetTableSorter (selector, regionName) {
     if (!selector) selector = '.sorted_table > tbody';
 
     var sortableList = $(selector);
     // Sortable rows
     sortableList.sortable({
       update: function( event, ui ) {
-        saveOrder(this)
+        saveOrder(this);
       }
     });
     function saveOrder(tbody) {
@@ -49354,14 +49380,35 @@ we.admin.layouts = {
         $(list[i]).attr('data-weight', i);
       }
 
+      var url = '/api/v1/widget-sort/';
+      if (we.config.structure.widgetSortUrl)
+        url = we.config.structure.widgetSortUrl;
+
+      url += we.config.theme + '/'+
+        $('layout').attr('data-we-layout')+
+        '/'+regionName + '?skipHTML=true&responseType=JSON';
+
       $.ajax({
-        url: '/api/v1/widget-sort?responseType=json',
+        url: url,
         method: 'POST',
         dataType: 'json',
         contentType: 'application/json; charset=utf-8',
         data: JSON.stringify({ widgets: widgets })
       }).done(function(r) {
-        console.log('Done sort widgets', r);
+        var region = $('#region-'+regionName);
+        var widget;
+        var lastWidget = null;
+        for (var i = 0; i < r.widget.length; i++) {
+          widget = region.find('widgets > widget[model-widget='+r.widget[i].id+']');
+          if (lastWidget) {
+            widget.insertAfter(lastWidget);
+          } else {
+            region.find('widgets').prepend(widget);
+          }
+          lastWidget = widget;
+        }
+
+        // console.log('Done sort widgets', r);
       });
     }
   }
@@ -49407,7 +49454,6 @@ we.admin.permission = {
     });
   }
 }
-
 we.components = {
   dataTable: function dataTable(selector, opts) {
     var table = $(selector);
@@ -49510,7 +49556,6 @@ we.components = {
 
     $(selector).metisMenu(options);
   },
-
   editor: {
     styles: {
       small: [
@@ -49543,7 +49588,6 @@ we.components = {
       element.summernote(cfg);
     }
   },
-
   select: {
     init: function(selector, opts) {
       if (!opts) opts = {};
@@ -49607,7 +49651,6 @@ we.components = {
     }
   }
 };
-
 we.message = {
   newMessage: function newMessage(status, message) {
     $('form[we-submit="ajax"] > fieldset').fadeIn('slow', function() {
