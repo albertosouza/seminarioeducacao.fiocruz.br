@@ -106,5 +106,8 @@
 	"Next": "Next",
 	"file.selector": "file.selector",
 	"file.uploader.title": "file.uploader.title",
-	"file.upload.selector.btn": "file.upload.selector.btn"
+	"file.upload.selector.btn": "file.upload.selector.btn",
+	"widget.delete.confirm.msg": "widget.delete.confirm.msg",
+	"layout.edit.btn": "layout.edit.btn",
+	"layout.edit.hide.btn": "layout.edit.hide.btn"
 }

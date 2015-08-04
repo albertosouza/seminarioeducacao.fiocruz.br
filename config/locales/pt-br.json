@@ -796,5 +796,8 @@
 	"conference.admin.managers.add": "conference.admin.managers.add",
 	"remove": "remove",
 	"conference.manager.remove.success": "conference.manager.remove.success",
-	"conference.manager.add.success": "conference.manager.add.success"
+	"conference.manager.add.success": "conference.manager.add.success",
+	"widget.sort": "widget.sort",
+	"widget.sortWidgets": "widget.sortWidgets",
+	"done": "done"
 }

@@ -16,15 +16,15 @@
   "dependencies": {
     "async": "^1.2.1",
     "lodash": "^3.3.1",
-    "we-core": "^0.3.57",
-    "we-plugin-conference": "^0.3.15",
+    "we-core": "^0.3.60",
+    "we-plugin-conference": "^0.3.16",
     "we-plugin-conference-simple-work": "^0.3.3",
-    "we-plugin-file": "^0.3.9",
-    "we-plugin-form": "^0.3.14",
+    "we-plugin-file": "^0.3.10",
+    "we-plugin-form": "^0.3.15",
     "we-plugin-gov-br": "^0.3.9",
     "we-plugin-location": "^0.3.2",
     "we-plugin-vocabulary": "^0.3.6",
-    "we-theme-admin-default": "^0.3.5",
+    "we-theme-admin-default": "^0.3.6",
     "we-theme-conference-seminarioeducacao.fiocruz.br": "*"
   },
   "devDependencies": {
