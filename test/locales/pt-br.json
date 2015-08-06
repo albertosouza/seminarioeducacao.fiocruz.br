@@ -109,5 +109,6 @@
 	"file.upload.selector.btn": "file.upload.selector.btn",
 	"widget.delete.confirm.msg": "widget.delete.confirm.msg",
 	"layout.edit.btn": "layout.edit.btn",
-	"layout.edit.hide.btn": "layout.edit.hide.btn"
+	"layout.edit.hide.btn": "layout.edit.hide.btn",
+	"widget.sort": "widget.sort"
 }
