@@ -714,7 +714,7 @@
 	"form-cfwork-prospects": "Pespectivas/desdobramentos",
 	"form-helper-cfwork-prospects": " ",
 	"form-placeholder-cfwork-prospects": " ",
-	"cfwork.delete.confirm.msg": "Você tem certeza que deseja deletar ele trabalho?",
+	"cfwork.delete.confirm.msg": "Você tem certeza que deseja deletar esse trabalho?",
 	"conference.cfwork.empty": "Nenhum trabalho registrado",
 	"cfregistrationtype.find": "Tipos de inscrição",
 	"requireValidation": "requireValidation",
@@ -799,5 +799,9 @@
 	"conference.manager.add.success": "Gerente de conferencia adicionado com sucesso",
 	"widget.sort": "widget.sort",
 	"widget.sortWidgets": "Ordenar blocos",
-	"done": "Concluido"
+	"done": "Concluido",
+	"cfregistration.edit": "cfregistration.edit",
+	"accept": "accept",
+	"export": "export",
+	"ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'u.cpf u.passaporte FROM cfregistrations INNER JOIN users AS u ON u.id=cfregistra' at line 1": "ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'u.cpf u.passaporte FROM cfregistrations INNER JOIN users AS u ON u.id=cfregistra' at line 1"
 }
