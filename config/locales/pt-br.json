@@ -809,9 +809,11 @@
 	"cfregistration.create": "cfregistration.create",
 	"cfregistrationtypeId cannot be null": "cfregistrationtypeId cannot be null",
 	"conference.cfregistration.already.registered": "conference.cfregistration.already.registered",
-	"Warning \"notNull\" validation has been deprecated in favor of Schema based \"allowNull\"": "Warning \"notNull\" validation has been deprecated in favor of Schema based \"allowNull\"",
 	"user.not-found": "user.not-found",
 	"auth.new-password": "auth.new-password",
 	"cfregistration.delete": "cfregistration.delete",
-	"cfregistration.delete.confirm.msg": "cfregistration.delete.confirm.msg"
+	"cfregistration.delete.confirm.msg": "cfregistration.delete.confirm.msg",
+	"paginate.sumary": "Exibindo {{recordsLength}} de {{count}}",
+	"widget.form.news.nid": "widget.form.news.nid",
+	"teaser": "teaser"
 }

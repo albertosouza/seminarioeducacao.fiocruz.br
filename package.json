@@ -16,8 +16,8 @@
   "dependencies": {
     "async": "^1.2.1",
     "lodash": "^3.3.1",
-    "we-core": "^0.3.62",
-    "we-plugin-conference": "^0.3.19",
+    "we-core": "^0.3.63",
+    "we-plugin-conference": "^0.3.20",
     "we-plugin-conference-simple-work": "^0.3.4",
     "we-plugin-csv": "^0.3.0",
     "we-plugin-file": "^0.3.10",
