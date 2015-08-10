@@ -819,5 +819,10 @@
 	"conference.current.manage": "conference.current.manage",
 	"form-cfregistration-userId": "form-cfregistration-userId",
 	"form-placeholder-cfregistration-userId": "form-placeholder-cfregistration-userId",
-	"form-helper-cfregistration-userId": "form-helper-cfregistration-userId"
+	"form-helper-cfregistration-userId": "form-helper-cfregistration-userId",
+	"messages": "mensagens",
+	"Messages": "Mensagens",
+	"cfregistration.latest": "Ultimas inscrições",
+	"cfsession.with.requireRegistration": "Atividades com inscrição",
+	"View.details": "Ver detalhes"
 }
