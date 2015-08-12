@@ -693,7 +693,7 @@
 	"form-cfwork-title": "Título da iniciativa",
 	"form-placeholder-cfwork-title": " ",
 	"form-helper-cfwork-title": " ",
-	"form-cfwork-author": "Autor responsável",
+	"form-cfwork-author": "Autores",
 	"form-placeholder-cfwork-author": " ",
 	"form-helper-cfwork-author": " ",
 	"form-cfwork-organization": "Unidade da Fiocruz vinculada",
@@ -824,5 +824,9 @@
 	"Messages": "Mensagens",
 	"cfregistration.latest": "Ultimas inscrições",
 	"cfsession.with.requireRegistration": "Atividades com inscrição",
-	"View.details": "Ver detalhes"
+	"View.details": "Ver detalhes",
+	"file cannot be null": "Você deve enviar um arquivo",
+	"cfsession.not.haveVacancy": "A atividade não tem mais vagas",
+	"user": "user",
+	"creator": "creator"
 }
