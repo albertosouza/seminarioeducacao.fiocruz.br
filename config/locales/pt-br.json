@@ -337,7 +337,7 @@
 	"form-user-acceptTerms": "form-user-acceptTerms",
 	"form-placeholder-user-acceptTerms": "form-placeholder-user-acceptTerms",
 	"form-helper-user-acceptTerms": "form-helper-user-acceptTerms",
-	"form-user-organization": "Unidade",
+	"form-user-organization": "Instituição",
 	"form-helper-user-organization": " ",
 	"form-user-cpf": "CPF",
 	"form-placeholder-user-cpf": "Digite seu CPF ...",
@@ -696,7 +696,7 @@
 	"form-cfwork-author": "Autores",
 	"form-placeholder-cfwork-author": " ",
 	"form-helper-cfwork-author": " ",
-	"form-cfwork-organization": "Unidade da Fiocruz vinculada",
+	"form-cfwork-organization": "Instituição",
 	"form-placeholder-cfwork-organization": " ",
 	"form-helper-cfwork-organization": " ",
 	"form-cfwork-partners": "Parcerias envolvidas",
@@ -828,5 +828,8 @@
 	"file cannot be null": "Você deve enviar um arquivo",
 	"cfsession.not.haveVacancy": "A atividade não tem mais vagas",
 	"user": "user",
-	"creator": "creator"
+	"creator": "creator",
+	"published": "published",
+	"createdAt": "createdAt",
+	"updatedAt": "updatedAt"
 }
