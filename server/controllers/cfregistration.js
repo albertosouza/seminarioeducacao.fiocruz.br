@@ -18,10 +18,17 @@ module.exports = {
       'u.passaporte, '+
       'u.country, '+
       'u.locationState, '+
-      'u.city '+
+      'u.city, '+
+      'terms.text AS organization, '+
+      'u.gender AS gender '+
     'FROM cfregistrations '+
     'INNER JOIN users AS u ON u.id=cfregistrations.userId '+
-    'WHERE cfregistrations.conferenceId='+ res.locals.conference.id;
+    'LEFT JOIN modelsterms ON modelsterms.modelId=u.id '+
+      'AND modelsterms.modelName=\'user\' '+
+      'AND modelsterms.field=\'organization\' '+
+    'LEFT JOIN terms ON terms.id=modelsterms.termId '+
+    'WHERE cfregistrations.conferenceId='+ res.locals.conference.id +
+    ' order by fullName ASC ';
 
     we.db.defaultConnection.query(sql, {
       type: we.db.defaultConnection.QueryTypes.SELECT
@@ -30,11 +37,12 @@ module.exports = {
           header: true,
           quotedString: true,
           columns: {
+            fullName: 'fullName',
+            displayName: 'displayName',
             registrationId: 'registrationId',
             userId: 'userId',
             email: 'email',
-            displayName: 'displayName',
-            fullName: 'fullName',
+            organization: 'organization',
             status: 'status',
             registrationDate: 'registrationDate',
             cpf: 'cpf',
