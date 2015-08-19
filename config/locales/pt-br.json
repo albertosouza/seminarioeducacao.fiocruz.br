@@ -831,5 +831,10 @@
 	"creator": "creator",
 	"published": "published",
 	"createdAt": "createdAt",
-	"updatedAt": "updatedAt"
+	"updatedAt": "updatedAt",
+	"cfsession.subscribers": "Inscritos",
+	"cfsession.findOne": "Atividade",
+	"userId": "userId",
+	"fullName": "Nome completo",
+	"subscriptions": "inscrições"
 }
