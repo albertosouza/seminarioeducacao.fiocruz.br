@@ -1,3 +1,19 @@
+var registrationFIelds  = [
+  'registrationId'+
+  'userId'+
+  'email'+
+  'displayName'+
+  'fullName'+
+  'status'+
+  'registrationDate'+
+  'cpf'+
+  'passaporte'+
+  'country'+
+  'locationState'+
+  'u.city'+
+  'organization'+
+  'gender'
+];
 
 module.exports = {
   /**
@@ -5,6 +21,19 @@ module.exports = {
    */
   exportRegistration: function exportRegistration(req, res) {
     var we = req.getWe();
+
+    var order = ' order by fullName ASC ';
+    // valid and parse orderby
+    if (req.query.order) {
+      var orderParams = req.query.order.split(' ');
+      if (orderParams.length == 2) {
+        if ( (orderParams[1] =='ASC') || (orderParams[1] == 'DESC') ) {
+          if (registrationFIelds.indexOf(orderParams[0])) {
+            order = ' order by '+req.query.order;
+          }
+        }
+      }
+    }
 
     var sql = 'SELECT '+
       'cfregistrations.id as registrationId, '+
@@ -28,7 +57,7 @@ module.exports = {
       'AND modelsterms.field=\'organization\' '+
     'LEFT JOIN terms ON terms.id=modelsterms.termId '+
     'WHERE cfregistrations.conferenceId='+ res.locals.conference.id +
-    ' order by fullName ASC ';
+    ' ' + order;
 
     we.db.defaultConnection.query(sql, {
       type: we.db.defaultConnection.QueryTypes.SELECT
