@@ -892,5 +892,6 @@
 	"form-helper-link-parent": "form-helper-link-parent",
 	"link.edit": "link.edit",
 	"conference.btn.closed": "Inscrições encerradas",
-	"conference.closed_after": "conference.closed_after"
+	"conference.closed_after": "Inscrições encerradas",
+	"conference.userTags": "Etiquetas"
 }
