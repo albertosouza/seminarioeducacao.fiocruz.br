@@ -1,8 +1,8 @@
 {
-  "name": "we-plugin-conference",
+  "name": "we-plugin-event",
   "version": "0.3.0",
   "private": true,
-  "homepage": "https://github.com/wejs/we-plugin-conference",
+  "homepage": "https://github.com/wejs/we-plugin-event",
   "authors": [
     "albertosouza <alberto.souza.99@gmail.com>"
   ],

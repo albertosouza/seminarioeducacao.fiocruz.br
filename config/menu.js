@@ -11,10 +11,10 @@ module.exports.menu = {
       },
       {
         beforeText: '<i class="fa fa-location-arrow"></i>',
-        text: 'conference.find',
+        text: 'event.find',
         afterText: '',
         type: 'route',
-        name: 'conference.find'
+        name: 'event.find'
       },
       // {
       //   beforeText: '<i class="fa fa-users"></i>',

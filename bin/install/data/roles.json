@@ -11,7 +11,7 @@
             "find_group",
             "find_role",
             "find_room",
-            "find_conference",
+            "find_event",
             "find_cfspeaker",
             "find_cfnews",
             "find_cfpartner"
@@ -40,7 +40,7 @@
             "use_messenger",
             "find_room",
             "create_room",
-            "find_conference",
+            "find_event",
             "find_cfspeaker",
             "find_cfnews",
             "find_cfpartner"
@@ -50,13 +50,13 @@
     },
     {
         "permissions": [
-            "manage_conference",
-            "find_conference",
+            "manage_event",
+            "find_event",
             "find_cfspeaker",
             "find_cfnews",
             "find_cfpartner"
         ],
-        "name": "conferenceManager",
+        "name": "eventManager",
         "description": null
     },
     {

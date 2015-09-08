@@ -51,7 +51,7 @@ module.exports = {
         }, function (err, data) {
           if (err) return res.serverError(err);
           var fileName = 'subscriptions-export-' +
-            res.locals.conference.id + '-'+
+            res.locals.event.id + '-'+
             req.params.cfsessionId + '-'+
             new Date().getTime() + '.csv';
 

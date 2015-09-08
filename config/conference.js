@@ -1,4 +1,4 @@
-module.exports.conference = {
-  singleConferenceId: 1,
-  defaultTheme: 'we-theme-conference-seminarioeducacao.fiocruz.br'
+module.exports.event = {
+  singleConferenceId: null,
+  defaultTheme: 'we-theme-event-seminarioeducacao.fiocruz.br'
 };

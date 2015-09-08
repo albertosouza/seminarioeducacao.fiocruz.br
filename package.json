@@ -16,18 +16,18 @@
   "dependencies": {
     "async": "^1.2.1",
     "lodash": "^3.3.1",
-    "we-core": "0.3.68",
-    "we-plugin-conference": "0.3.26",
-    "we-plugin-conference-simple-work": "0.3.8",
+    "we-core": "0.3.70",
+    "we-plugin-event": "0.3.27",
+    "we-plugin-event-simple-work": "0.3.9",
     "we-plugin-csv": "0.3.0",
     "we-plugin-file": "0.3.11",
-    "we-plugin-form": "0.3.16",
+    "we-plugin-form": "0.3.17",
     "we-plugin-gov-br": "0.3.10",
     "we-plugin-location": "0.3.2",
     "we-plugin-menu": "0.3.1",
     "we-plugin-vocabulary": "0.3.7",
     "we-theme-admin-default": "0.3.9",
-    "we-theme-conference-seminarioeducacao.fiocruz.br": "*"
+    "we-theme-event-seminarioeducacao.fiocruz.br": "*"
   },
   "devDependencies": {
     "gulp": "^3.9.0",

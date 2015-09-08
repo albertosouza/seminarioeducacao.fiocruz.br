@@ -26,7 +26,7 @@ build/Release
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
 node_modules/*
 # não ignora a pasta do tema
-!node_modules/we-theme-conference-seminarioeducacao.fiocruz.br
+!node_modules/we-theme-event-seminarioeducacao.fiocruz.br
 
 client/bower_components
 bower_components

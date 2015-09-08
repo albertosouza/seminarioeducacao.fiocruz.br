@@ -12,21 +12,7 @@ module.exports = function loadPlugin(projectPath, Plugin) {
 
   // set plugin routes
   plugin.setRoutes({
-    //redirect to conference 1
-    'get /': {
-      controller : 'main',
-      action     : 'index',
-      template   : 'home/index',
-      layoutName : 'fullwidth'
-    },
-    //redirect to conference 1
-    'get /conference': {
-      controller : 'main',
-      action     : 'index',
-      template   : 'home/index',
-      layoutName : 'fullwidth'
-    },
-    'get /conference/1/enviar-trabalho':  {
+    'get /event/1/enviar-trabalho':  {
       controller : 'main',
       action     : 'redirectToSendWork',
       responseType: 'json'

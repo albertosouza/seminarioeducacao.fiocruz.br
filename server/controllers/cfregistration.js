@@ -17,7 +17,7 @@ var registrationFIelds  = [
 
 module.exports = {
   /**
-   * Export conference registration list
+   * Export event registration list
    */
   exportRegistration: function exportRegistration(req, res) {
     var we = req.getWe();
@@ -56,7 +56,7 @@ module.exports = {
       'AND modelsterms.modelName=\'user\' '+
       'AND modelsterms.field=\'organization\' '+
     'LEFT JOIN terms ON terms.id=modelsterms.termId '+
-    'WHERE cfregistrations.conferenceId='+ res.locals.conference.id +
+    'WHERE cfregistrations.eventId='+ res.locals.event.id +
     ' ' + order;
 
     we.db.defaultConnection.query(sql, {
@@ -83,7 +83,7 @@ module.exports = {
         }, function (err, data){
           if (err) return res.serverError(err);
           var fileName = 'registration-export-' +
-            res.locals.conference.id + '-'+
+            res.locals.event.id + '-'+
             new Date().getTime() + '.csv';
           res.setHeader('Content-disposition', 'attachment; filename='+fileName);
           res.set('Content-Type', 'application/octet-stream');
