@@ -1,6 +1,6 @@
 {
   "name": "seminarioeducacao.fiocruz.br",
-  "version": "0.3.28",
+  "version": "0.3.29",
   "private": true,
   "main": "./app.js",
   "scripts": {
@@ -16,9 +16,9 @@
   "dependencies": {
     "async": "^1.2.1",
     "lodash": "^3.3.1",
-    "we-core": "0.3.74",
+    "we-core": "0.3.75",
     "we-plugin-csv": "0.3.0",
-    "we-plugin-event": "0.3.31",
+    "we-plugin-event": "0.3.32",
     "we-plugin-event-simple-work": "0.3.9",
     "we-plugin-file": "0.3.11",
     "we-plugin-form": "0.3.17",
@@ -40,6 +40,6 @@
     "mocha": "2.3.2",
     "sinon": "^1.14.1",
     "supertest": "^1.0.1",
-    "we-test-tools": "^0.3.6"
+    "we-test-tools": "^0.3.9"
   }
 }
