@@ -161,18 +161,27 @@ describe('eventFeature', function() {
         });
       });
     });
-    it ('get /event should redirect to event 1', function (done) {
+    it ('get /event should return published events list', function (done) {
       var cfs = [
         stubs.eventStub(), stubs.eventStub(), stubs.eventStub()
       ];
+
+      cfs.forEach(function(c){
+        c.published = true;
+      });
 
       we.db.models.event.bulkCreate(cfs).then(function () {
         request(http)
         .get('/event')
         .set('Accept', 'application/json')
-        .expect(302)
+        .expect(200)
         .end(function (err, res) {
           if (err) throw err;
+          assert(res.body.event.length >= 3);
+
+          res.body.event.forEach(function (e){
+            assert(e.published);
+          });
 
           done();
         });
@@ -217,7 +226,7 @@ describe('eventFeature', function() {
     it ('delete /event/:id should delete one event', function (done) {
       var cf = stubs.eventStub();
       we.db.models.event.create(cf).then(function (scf) {
-        authenticatedRequest.delete('/event/'+ scf.id)
+        authenticatedRequest.post('/event/'+ scf.id+ '/delete')
         .set('Accept', 'application/json')
         .expect(204)
         .end(function (err, res) {
