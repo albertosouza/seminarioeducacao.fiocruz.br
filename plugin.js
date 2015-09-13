@@ -12,7 +12,7 @@ module.exports = function loadPlugin(projectPath, Plugin) {
 
   // set plugin routes
   plugin.setRoutes({
-    'get /event/1/enviar-trabalho':  {
+    'get /event/:eventId/enviar-trabalho':  {
       controller : 'main',
       action     : 'redirectToSendWork',
       responseType: 'json'
