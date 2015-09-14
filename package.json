@@ -7,7 +7,7 @@
     "dev": "PORT=4000 node app.js",
     "verbose": "PORT=4000 LOG_LV=verbose node app.js",
     "prod": "PORT=4000 NODE_ENV=prod node app.js",
-    "deps": "npm install && bower install",
+    "deps": "npm install",
     "start": "PORT=4000 node app.js",
     "build": "gulp build",
     "test": "NODE_ENV=test LOG_LV=info ./node_modules/.bin/mocha test/bootstrap.js test/**/*.test.js",
