@@ -80,7 +80,7 @@
   "auth.new-password": "Nova senha",
   "auth.new-password.set.successfully": "A senha foi alterada",
   "auth.newPassword.and.password.diferent": "Os campos nova senha e repetir a senha estão diferentes",
-  "auth.register.email.exists": "O email informado já está cadastrado no sistema",
+  "auth.register.email.exists": "O email informado já está cadastrado no sistema. Favor, entrar com seu login e senha e em seguida clicar no botão 'Inscrição' do evento desejado",
   "auth.register.error.username.registered": "O nome de usuário selecionado já está registrado no sistema, selecione outro nome de usuário",
   "auth.register.require.email.activation": "A sua conta de usuário foi criada mas você deve validar o seu email clicando no link de enviamos para a conta de email informada no registro",
   "auth.reset-password.success.can": "auth.reset-password.success.can",
