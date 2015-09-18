@@ -1138,15 +1138,15 @@
   "weight": "peso",
   "widget": "bloco",
   "widget.add": "Adicionar widget",
-  "widget.context": "widget.context",
+  "widget.context": "Contexto",
   "widget.delete.confirm.msg": "Vocẽ tem certeza que deseja deletar esse widget?",
   "widget.form.news.nid": "Id da notícia",
   "widget.form.news.nid.placeholder": "Deixe esse campo vazio para exibir a ultima notícia publicada",
   "widget.form.video.vid": "Id do conteúdo vídeo:",
-  "widget.in-context": "widget.in-context",
-  "widget.in-page": "widget.in-page",
-  "widget.in-portal": "widget.in-portal",
-  "widget.in-session": "widget.in-session",
+  "widget.in-context": "No contexo atual",
+  "widget.in-page": "Na página atual",
+  "widget.in-portal": "Em todo o portal",
+  "widget.in-session": "Na sessão atual e em páginas internas",
   "widget.in-session-record": "Nos conteúdos dessa sessão",
   "widget.name": "Nome do widget",
   "widget.sort": "Ordenar blocos",
@@ -1154,5 +1154,6 @@
   "widget.title": "Título do widget",
   "widget.update": "Atualizar bloco",
   "widget.visibility": "Exibir o widget: ",
-  "yes": "yes"
+  "yes": "sim",
+  "cfwork.btn.text": "Enviar trabalho"
 }
