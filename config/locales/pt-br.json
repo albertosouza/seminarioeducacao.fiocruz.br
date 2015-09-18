@@ -1155,5 +1155,8 @@
   "widget.update": "Atualizar bloco",
   "widget.visibility": "Exibir o widget: ",
   "yes": "sim",
-  "cfwork.btn.text": "Enviar trabalho"
+  "cfwork.btn.text": "Enviar trabalho",
+  "event.cfwork.success.email": "Trabalho enviado",
+  "event.cfwork.success.admin.email": "Novo trabalho enviado",
+  "event.cfwork.accepted.email": "O seu trabalho foi aprovado"
 }
