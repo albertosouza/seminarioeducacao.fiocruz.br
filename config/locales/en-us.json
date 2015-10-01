@@ -21,6 +21,7 @@
   "auth.new-password": "New password",
   "auth.register.require.email.activation": "We send an account validation email to the email account you entered with how to validate your account",
   "auth.reset-password.success.can": "Your password is updated",
+  "certification.my": "My certifications",
   "certification.user.empty": "You dont have certifications in this system",
   "certification.userCertifications": "User certifications",
   "cfcertification.adminPage": "Event certifications",

@@ -85,6 +85,7 @@
   "auth.register.require.email.activation": "A sua conta de usuário foi criada mas você deve validar o seu email clicando no link de enviamos para a conta de email informada no registro",
   "auth.reset-password.success.can": "auth.reset-password.success.can",
   "category": "categoria",
+  "certification.my": "Meus certificados",
   "certification.user.empty": "Você não tem certificados nesse sistema",
   "certification.userCertifications": "Certificados do usuário",
   "cf.registration.name": "Nome de registro",
