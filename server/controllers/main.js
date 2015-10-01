@@ -12,5 +12,12 @@ module.exports = {
     } else {
       res.redirect('/login?redirectTo=' + req.url);
     }
+  },
+  redirectToCertifications: function redirectToCertifications(req, res) {
+    if (req.isAuthenticated()) {
+      res.redirect('/user/'+req.user.id+'/certification');
+    } else {
+      res.redirect('/login?redirectTo=' + req.url);
+    }
   }
 };

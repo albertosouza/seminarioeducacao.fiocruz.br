@@ -19,6 +19,14 @@ module.exports = function loadPlugin(projectPath, Plugin) {
     }
   });
 
+  plugin.setRoutes({
+    'get /meus-certificados':  {
+      controller : 'main',
+      action     : 'redirectToCertifications',
+      responseType: 'json'
+    }
+  });
+
   plugin.hooks.on('we:models:before:instance', function (we, done) {
     we.db.modelsConfigs.user.definition.username.unique = false;
     we.db.modelsConfigs.user.definition.username.allowNull = true;
