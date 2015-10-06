@@ -16,19 +16,19 @@
   "dependencies": {
     "async": "^1.2.1",
     "lodash": "^3.3.1",
-    "we": "^0.3.11",
-    "we-core": "0.3.87",
+    "we": "^0.3.12",
+    "we-core": "0.3.89",
     "we-plugin-certification": "0.3.2",
     "we-plugin-csv": "0.3.0",
-    "we-plugin-event": "0.3.49",
+    "we-plugin-event": "0.3.50",
     "we-plugin-event-certification": "0.3.5",
-    "we-plugin-event-simple-work": "0.3.12",
-    "we-plugin-file": "0.3.13",
+    "we-plugin-event-simple-work": "0.3.13",
+    "we-plugin-file": "0.3.14",
     "we-plugin-form": "0.3.20",
     "we-plugin-gov-br": "0.3.10",
     "we-plugin-location": "0.3.3",
     "we-plugin-menu": "0.3.5",
-    "we-plugin-vocabulary": "0.3.10",
+    "we-plugin-vocabulary": "0.3.11",
     "we-theme-admin-default": "0.3.10",
     "we-theme-event": "0.3.2",
     "we-theme-event-seminarioeducacao.fiocruz.br": "*"
@@ -40,9 +40,9 @@
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.2.0",
-    "mocha": "2.3.2",
+    "mocha": "2.3.3",
     "sinon": "^1.14.1",
-    "supertest": "1.0.1",
+    "supertest": "1.1.0",
     "we-test-tools": "^0.3.9"
   }
 }
