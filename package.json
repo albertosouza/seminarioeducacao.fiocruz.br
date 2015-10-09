@@ -18,6 +18,7 @@
     "lodash": "^3.3.1",
     "we": "^0.3.12",
     "we-core": "0.3.91",
+    "we-plugin-bootstrap3": "^0.3.1",
     "we-plugin-certification": "0.3.2",
     "we-plugin-csv": "0.3.0",
     "we-plugin-event": "0.3.54",
