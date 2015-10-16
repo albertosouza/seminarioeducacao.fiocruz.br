@@ -17,11 +17,11 @@
     "async": "^1.2.1",
     "lodash": "^3.3.1",
     "we": "^0.3.12",
-    "we-core": "0.3.93",
+    "we-core": "0.3.94",
     "we-plugin-bootstrap3": "^0.3.1",
     "we-plugin-certification": "0.3.2",
     "we-plugin-csv": "0.3.0",
-    "we-plugin-event": "0.3.55",
+    "we-plugin-event": "0.3.56",
     "we-plugin-event-certification": "0.3.5",
     "we-plugin-event-simple-work": "0.3.13",
     "we-plugin-file": "0.3.14",
@@ -31,7 +31,7 @@
     "we-plugin-menu": "0.3.5",
     "we-plugin-vocabulary": "0.3.11",
     "we-theme-admin-default": "0.3.10",
-    "we-theme-event": "0.3.3",
+    "we-theme-event": "0.3.7",
     "we-theme-event-seminarioeducacao.fiocruz.br": "*"
   },
   "devDependencies": {
