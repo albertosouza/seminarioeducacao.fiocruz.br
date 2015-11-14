@@ -1,6 +1,8 @@
 /**
  * Main project controller
  */
+var http = require('http');
+var request = require('request');
 
 module.exports = {
   index: function index(req, res) {
@@ -19,5 +21,23 @@ module.exports = {
     } else {
       res.redirect('/login?redirectTo=' + req.url);
     }
+  },
+
+  /**
+   * Proxy request from unasus oai https server to http
+   */
+  oaiUnasusPMHProxy: function oaiUnasusPMHProxy(req, res, next) {
+    var url = 'https://ares.unasus.gov.br';
+    url += req.url.replace('/oai-unasus', '');
+
+    request(url, function (error, response, body) {
+      if (error) {
+        console.error('Error on get data from unasus server',error);
+      }
+
+      var contentType = response.headers['content-type'];
+      res.writeHead(response.statusCode, {'Content-Type': contentType});
+      res.end(body);
+    });
   }
 };

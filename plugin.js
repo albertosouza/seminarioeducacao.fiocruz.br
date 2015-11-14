@@ -16,13 +16,15 @@ module.exports = function loadPlugin(projectPath, Plugin) {
       controller : 'main',
       action     : 'redirectToSendWork',
       responseType: 'json'
-    }
-  });
-
-  plugin.setRoutes({
+    },
     'get /meus-certificados':  {
       controller : 'main',
       action     : 'redirectToCertifications',
+      responseType: 'json'
+    },
+    'get /oai-unasus/*':  {
+      controller : 'main',
+      action     : 'oaiUnasusPMHProxy',
       responseType: 'json'
     }
   });
