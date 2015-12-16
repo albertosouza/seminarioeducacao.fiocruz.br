@@ -31,7 +31,7 @@
     "we-plugin-location": "0.3.4",
     "we-plugin-menu": "^0.3.10",
     "we-plugin-vocabulary": "^0.3.20",
-    "we-theme-admin-default": "0.3.11",
+    "we-theme-admin-default": "^0.3.11",
     "we-theme-event": "0.3.7",
     "we-theme-event-seminarioeducacao.fiocruz.br": "*"
   },
