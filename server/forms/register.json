@@ -52,6 +52,9 @@
     "estrangeiro": {
       "type": "gov-br/brasileiro-seletor",
       "defaultValue": false
+    },
+    "recaptcha": {
+      "type": "recaptcha"
     }
   },
   "actions": {
