@@ -20,7 +20,7 @@
     "we": "^0.3.14",
     "we-core": "^0.3.116",
     "we-plugin-bootstrap3": "^0.3.1",
-    "we-plugin-certification": "^0.3.3",
+    "we-plugin-certification": "^0.3.4",
     "we-plugin-csv": "0.3.0",
     "we-plugin-event": "0.3.57",
     "we-plugin-event-certification": "^0.3.6",
