@@ -1,6 +1,6 @@
 {
   "name": "seminarioeducacao.fiocruz.br",
-  "version": "0.3.38",
+  "version": "0.3.39",
   "private": true,
   "main": "./app.js",
   "scripts": {
@@ -14,37 +14,37 @@
     "prepublish": "npm prune"
   },
   "dependencies": {
-    "async": "^1.5.0",
+    "async": "^1.5.2",
     "lodash": "^3.3.1",
-    "request": "^2.67.0",
+    "request": "^2.69.0",
     "we": "^0.3.14",
-    "we-core": "^0.3.110",
+    "we-core": "^0.3.116",
     "we-plugin-bootstrap3": "^0.3.1",
-    "we-plugin-certification": "0.3.2",
+    "we-plugin-certification": "^0.3.3",
     "we-plugin-csv": "0.3.0",
-    "we-plugin-event": "0.3.56",
-    "we-plugin-event-certification": "0.3.5",
+    "we-plugin-event": "0.3.57",
+    "we-plugin-event-certification": "^0.3.6",
     "we-plugin-event-simple-work": "0.3.13",
-    "we-plugin-file": "^0.3.20",
+    "we-plugin-file": "^1.0.1",
     "we-plugin-form": "^0.3.27",
     "we-plugin-gov-br": "0.3.10",
     "we-plugin-location": "0.3.4",
-    "we-plugin-menu": "^0.3.10",
+    "we-plugin-menu": "^0.3.12",
     "we-plugin-vocabulary": "^0.3.20",
-    "we-theme-admin-default": "^0.3.11",
-    "we-theme-event": "0.3.7",
+    "we-theme-admin-default": "^0.3.12",
+    "we-theme-event": "^0.3.8",
     "we-theme-event-seminarioeducacao.fiocruz.br": "*"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
-    "gulp-minify-css": "^1.2.2",
+    "gulp-minify-css": "^1.2.3",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.5.1",
-    "mocha": "^2.3.4",
-    "sinon": "^1.17.2",
+    "mocha": "^2.4.5",
+    "sinon": "^1.17.3",
     "supertest": "1.1.0",
-    "we-test-tools": "^0.3.10"
+    "we-test-tools": "^0.3.11"
   }
 }
