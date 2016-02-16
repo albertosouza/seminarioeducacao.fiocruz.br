@@ -15,10 +15,10 @@
   },
   "dependencies": {
     "async": "^1.5.2",
-    "lodash": "^3.3.1",
+    "lodash": "^4.4.0",
     "request": "^2.69.0",
     "we": "^0.3.14",
-    "we-core": "^0.3.116",
+    "we-core": "^0.3.120",
     "we-plugin-bootstrap3": "^0.3.1",
     "we-plugin-certification": "^0.3.6",
     "we-plugin-csv": "0.3.0",
@@ -44,7 +44,7 @@
     "gulp-uglify": "^1.5.1",
     "mocha": "^2.4.5",
     "sinon": "^1.17.3",
-    "supertest": "1.1.0",
+    "supertest": "1.2.0",
     "we-test-tools": "^0.3.11"
   }
 }
