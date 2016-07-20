@@ -1,0 +1,34 @@
+{
+  "roles": {
+    "eventManager": {
+      "name": "eventManager",
+      "isSystemRole": true,
+      "permissions": [
+        "find_event",
+        "create_event",
+        "update_event",
+        "delete_event",
+        "manage_event"
+      ]
+    },
+    "administrator": {
+      "name": "administrator",
+      "permissions": []
+    },
+    "authenticated": {
+      "name": "authenticated",
+      "permissions": [],
+      "isSystemRole": true
+    },
+    "unAuthenticated": {
+      "name": "unAuthenticated",
+      "permissions": [],
+      "isSystemRole": true
+    },
+    "owner": {
+      "name": "owner",
+      "permissions": [],
+      "isSystemRole": true
+    }
+  }
+}
